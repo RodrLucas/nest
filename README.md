@@ -25,6 +25,12 @@ $ yarn run start
 $ yarn run start:dev
 ```
 
+## Swagger - Endpoints
+
+```
+http://localhost:3000/api
+```
+
 ## Stay in touch
 
 - Author - [Lucas Rodrigues]([https://www.linkedin.com/in/rodrlucas/])
