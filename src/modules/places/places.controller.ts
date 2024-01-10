@@ -15,8 +15,10 @@ import { AuthGuard } from '@nestjs/passport';
 import { PlacesService } from './places.service';
 import { Places as PlacesEntity } from './places.entity';
 import { PlacesDto } from './dto/places.dto';
+import { ApiTags } from '@nestjs/swagger';
 
 @Controller('places')
+@ApiTags('places')
 export class PlacesController {
   constructor(private readonly placesService: PlacesService) {}
 

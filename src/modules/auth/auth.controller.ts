@@ -4,8 +4,10 @@ import { AuthService } from './auth.service';
 import { UserDto } from '../users/dto/user.dto';
 import { DoesUserExist } from 'src/core/guards/doesUserExist.guard';
 import { AuthDto } from './dto/auth.dtp';
+import { ApiTags } from '@nestjs/swagger';
 
 @Controller('auth')
+@ApiTags('auth')
 export class AuthController {
   constructor(private authService: AuthService) {}
 
