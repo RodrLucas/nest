@@ -33,7 +33,7 @@ http://localhost:3000/api
 
 ## Stay in touch
 
-- Author - [Lucas Rodrigues]([https://www.linkedin.com/in/rodrlucas/])
+- Author - [Lucas Rodrigues](https://www.linkedin.com/in/rodrlucas/)
 
 ## License
 
