@@ -1,10 +1,28 @@
-version: "3"
-
+version: '3'
 services:
-  app:
+  nest-challenge:
+    container_name: nest-challenge
     build: .
-    command: ./.docker/start.sh
     ports:
       - 3000:3000
-    volumes:
-      - .:/home/node/app
+    env_file: .env
+    depends_on:
+      - postgres
+    links:
+      - postgres
+    networks:
+      - nest-challenge-network
+
+  postgres:
+    container_name: postgres
+    restart: always
+    image: postgres
+    ports:
+      - 5432:5432
+    env_file: postgres.env
+    networks:
+      - nest-challenge-network
+
+networks:
+  nest-challenge-network:
+    driver: bridge

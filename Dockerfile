@@ -1,7 +1,19 @@
-FROM node:20.5.1-slim
+FROM node:lts-slim
 
-USER node
+WORKDIR /api
 
-WORKDIR /home/node/app
+ENV NODE_ENV production
 
-CMD ["tail", "-f", "/dev/null"]
+ENV PORT 3001
+
+EXPOSE 3001
+
+COPY . .
+
+RUN npm install -g @nestjs/cli
+
+RUN npm ci
+
+RUN npm run build
+
+CMD [ "npm", "run", "start:prod" ]
