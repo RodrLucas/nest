@@ -9,20 +9,10 @@
 
 [Nest](https://github.com/nestjs/nest) Test.
 
-## Installation
-
-```bash
-$ yarn install
-```
-
 ## Running the app
 
 ```bash
-# development
-$ yarn run start
-
-# watch mode
-$ yarn run start:dev
+docker compose up
 ```
 
 ## Swagger - Endpoints
